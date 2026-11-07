@@ -1599,8 +1599,6 @@ function startVerification({ email, name, onVerified }) {
       overlay.querySelector(".vf-card").classList.remove("shake");
       void overlay.offsetWidth;
       overlay.querySelector(".vf-card").classList.add("shake");
-      boxes.forEach((x) => (x.value = ""));   // clear so retyping doesn't re-submit and burn tries
-      boxes[0].focus();
       return say(`That number isn't right. ${5 - attempts} ${5 - attempts === 1 ? "try" : "tries"} left.`);
     }
     code = "";
